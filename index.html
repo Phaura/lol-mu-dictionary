@@ -1,22 +1,83 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Startup</title>
-		
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LoL Matchup Dictionary</title>
 
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap" rel="stylesheet">
-		
-		<!-- Bootstrap CSS from CDN -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-		
-		<!-- Own stylesheet -->
-		<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+	<!-- Bootstrap CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+	<!-- Own Sylesheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
 
 	</head>
 	<body>
-		<h1>Hello</h1>
+		<div class="container d-flex align-items-center h-100">
+		<!-- Background Audio -->
+			<audio  id="bg-audio" autoplay loop muted playsinline preload="auto">
+				<source src="awakenlol.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
 
-	
+			<!-- Overlay Gate -->
+			<div id="experience-overlay">
+				<button id="enter-btn">Enter the Experience</button>
+			</div>
+
+			<div class="row">
+				<div class="buffer col-12"></div>
+				<div class="buffer col-12"></div>
+				<header class="text-center col-12">
+					<h1 class="text-uppercase">League of Legends Matchup Dictionary</h1>
+				</header>
+				<section class="text-center col-12">
+					<hr>
+					<br>
+					<a href="https://mailchi.mp/7b185f672581/lol-mu-dictionary"><button class="btn btn-primary">Enter</button></a>
+				</section>
+				<div class="buffer col-12"></div>
+				<div class="text-center col-12">
+					<h2>2026</h2>
+				</div>
+			</div>
+		</div>
+
+		<!-- Tiny Script -->
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				const audio = document.getElementById('bg-audio');
+				const overlay = document.getElementById('experience-overlay');
+				const button = document.getElementById('enter-btn');
+
+				// try to start muted so it's ready
+				 if  (audio) { audio.play().catch(()=>{}); }
+
+				button.onclick = async () => {
+					audio.muted = false;
+					try {
+						await audio.play();
+					} catch (e) {
+						console.warn('Audio play failed, overlay will still close.', e);
+					}
+					overlay.style.transition = 'opacity .4s ease';
+					overlay.style.opacity = '0';
+					setTimeout(() => overlay.remove(), 400);
+					 // hide overlay
+				};
+			});
+		</script>
 	</body>
 </html>

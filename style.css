@@ -20,7 +20,7 @@ html {
 
 h1 {
 	color: white;
-	font-size: 3rem;
+	font-size: 2rem;
 	}
 
 h2 {
@@ -33,9 +33,9 @@ h2 {
 
 
 hr {
-    margin: 20px auto;
+    margin: 10px auto;
     color: #F05F44;
-    border: 3px solid #F05F44;
+    border: 1px solid #F05F44;
     max-width: 65px;
     opacity: 1;  
 }
@@ -69,3 +69,36 @@ hr {
 
 }
 
+#experience-overlay {
+	position: fixed;
+	inset: 0;
+	background: #000;
+	display: grid;
+	place-items: center;
+	pointer-events: auto;
+	z-index: 9999;
+}
+
+#enter-btn {
+	background: none;
+	color: white;
+	border: 2px solid white;
+	padding: 0.8rem 1.4rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+
+@keyframes pulse {
+	0%, 100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+	50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+}
+
+#enter-btn:hover {
+	color: #000;
+	background: #fff;
+	box-shadow: 0 0 25px rgba(255,255,255,0.4);
+	transform: scale(1.05);
+	animation: pulse 1s infinite;
+}

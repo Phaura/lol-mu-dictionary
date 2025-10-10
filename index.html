@@ -28,7 +28,7 @@
 		<div class="container d-flex align-items-center h-100">
 		<!-- Background Audio -->
 			<audio  id="bg-audio" autoplay loop muted playsinline preload="auto">
-				<source src="awakenlol.mp3" type="audio/mpeg">
+				<source src="theconcerto.mp3" type="audio/mpeg">
 				Your browser does not support the audio element.
 			</audio>
 
@@ -66,12 +66,17 @@
 				 if  (audio) { audio.play().catch(()=>{}); }
 
 				button.onclick = async () => {
+					if (!audio) return;
 					audio.muted = false;
+					audio.volume = 0.05;
+					
+
 					try {
 						await audio.play();
 					} catch (e) {
 						console.warn('Audio play failed, overlay will still close.', e);
 					}
+
 					overlay.style.transition = 'opacity .4s ease';
 					overlay.style.opacity = '0';
 					setTimeout(() => overlay.remove(), 400);
@@ -79,5 +84,29 @@
 				};
 			});
 		</script>
+
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				const gifs = ['camille_gif.gif', 'camille_jhin.gif'];
+				let i = 0;
+
+				const s = document.body.style;
+				s.backgroundRepeat = 'no-repeat';
+				s.backgroundPosition = 'center center';
+				s.backgroundAttachment = 'fixed';
+				s.backgroundSize = 'cover'
+
+				s.backgroundImage = `url(${gifs[i]})`;
+
+				setInterval(() => {
+					i = (i + 1) % gifs.length;
+					s.backgroundImage = `url(${gifs[i]})`;
+
+				}, 5000);
+
+			});
+		</script>
+			
+
 	</body>
 </html>

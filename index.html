@@ -1,112 +1,89 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>LoL Matchup Dictionary</title>
-
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Toplane Matchup Oracle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/thinline.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/solid.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    <script src="script.js"></script>
+    <script src="https://unicons.iconscout.com/release/v4.2.0/script/monochrome/bundle.js" defer></script>
+</head>
 
 
-	<!-- Bootstrap CDN -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<body>
+    <div class="wrapper">
+        <nav class="zone nav">
+            <ul class="main-nav">
+                <li><a href="#about">About</a></li>
+                <li class="contact-nav"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-	<!-- Own Sylesheet -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+        <div class="title"><img src="toplane-mu-oracle-banner-002.png"></div>
 
 
-
-	</head>
-	<body>
-		<div class="container d-flex align-items-center h-100">
-		<!-- Background Audio -->
-			<audio  id="bg-audio" autoplay loop muted playsinline preload="auto">
-				<source src="theconcerto.mp3" type="audio/mpeg">
-				Your browser does not support the audio element.
-			</audio>
-
-			<!-- Overlay Gate -->
-			<div id="experience-overlay">
-				<button id="enter-btn">Enter the Experience</button>
-			</div>
-
-			<div class="row">
-				<div class="buffer col-12"></div>
-				<div class="buffer col-12"></div>
-				<header class="text-center col-12">
-					<h1 class="text-uppercase">League of Legends Matchup Dictionary</h1>
-				</header>
-				<section class="text-center col-12">
-					<hr>
-					<br>
-					<a href="https://mailchi.mp/7b185f672581/lol-mu-dictionary"><button class="btn btn-primary">Enter</button></a>
-				</section>
-				<div class="buffer col-12"></div>
-				<div class="text-center col-12">
-					<h2>2026</h2>
-				</div>
-			</div>
-		</div>
-
-		<!-- Tiny Script -->
-		<script>
-			window.addEventListener('DOMContentLoaded', () => {
-				const audio = document.getElementById('bg-audio');
-				const overlay = document.getElementById('experience-overlay');
-				const button = document.getElementById('enter-btn');
-
-				// try to start muted so it's ready
-				 if  (audio) { audio.play().catch(()=>{}); }
-
-				button.onclick = async () => {
-					if (!audio) return;
-					audio.muted = false;
-					audio.volume = 0.05;
-					
-
-					try {
-						await audio.play();
-					} catch (e) {
-						console.warn('Audio play failed, overlay will still close.', e);
-					}
-
-					overlay.style.transition = 'opacity .4s ease';
-					overlay.style.opacity = '0';
-					setTimeout(() => overlay.remove(), 400);
-					 // hide overlay
-				};
-			});
-		</script>
-
-		<script>
-			window.addEventListener('DOMContentLoaded', () => {
-				const gifs = ['camille_gif.gif', 'camille_jhin.gif'];
-				let i = 0;
-
-				const s = document.body.style;
-				s.backgroundRepeat = 'no-repeat';
-				s.backgroundPosition = 'center center';
-				s.backgroundAttachment = 'fixed';
-				s.backgroundSize = 'cover'
-
-				s.backgroundImage = `url(${gifs[i]})`;
-
-				setInterval(() => {
-					i = (i + 1) % gifs.length;
-					s.backgroundImage = `url(${gifs[i]})`;
-
-				}, 5000);
-
-			});
-		</script>
-			
-
-	</body>
+        <div class="main">
+            <!-- <div class="form block">
+                <form>
+                    Enter Champion <input type="text" name="champion">
+                    <br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+            </div> -->
+            <div class="square">
+                <!-- <h3>TEXT</h3> -->
+                <div class="main-card grid-wrapper">
+                    <div class="card-zone" data-champion="riven"><img src="champion_sources/riven-icon-001.png"></div>
+                    <div class="card-zone" data-champion="fiora"><img src="champion_sources/fiora-icon-002.png"></div>
+                    <div class="card-zone" data-champion="camille"><img src="champion_sources/camille-icon-001.png"></div>
+                    <div class="card-zone" data-champion="gangplank"><img src="champion_sources\gangplank-icon-001.png"></div>
+                    <div class="card-zone" data-champion="yone"><img src="champion_sources/yone-icon-002.png"></div>
+                    <div class="card-zone" data-champion="aatrox"><img src="champion_sources/aatrox-icon-002.png"></div>
+                    <div class="card-zone" data-champion="jax"><img src="champion_sources/jax-icon-002.png"></div>
+                    <div class="card-zone" data-champion="sett"><img src="champion_sources/sett-icon-001.png"></div>
+                    <div class="card-zone" data-champion="darius"><img src="champion_sources/darius-icon-001.png"></div>
+                    <div class="card-zone" data-champion="irelia"><img src="champion_sources/irelia-icon-001.png"></div>
+                    <div class="card-zone" data-champion="garen"><img src="champion_sources/garen-icon-002.png"></div>
+                    <div class="card-zone" data-champion="teemo"><img src="champion_sources/teemo-icon-001.png"></div>
+                    <div class="card-zone" data-champion="volibear"><img src="champion_sources/volibear-icon-001.png"></div>
+                    <div class="card-zone" data-champion="gwen"><img src="champion_sources/gwen-icon-001.png"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer">
+            <!-- <h1>FOOTER</h1> -->
+            <div class="socials footer">
+                <ul class="socials">
+                    <li class="twitter-X">
+                        <a href="https://x.com/Phauraa" target="_blank" rel="noopener noreferrer">
+                            <i class="uit uit-twitter-alt"></i>
+                        </a>
+                    </li>
+                    <li class="youtube">
+                        <a href="https://www.youtube.com/@Phaura" target="_blank" rel="noopener noreferrer">
+                            <i class="uit uit-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="instagram">
+                        <a href="https://www.instagram.com/xphaura/" target="_blank" rel="noopener noreferrer">
+                            <i class="uil uil-instagram" height=></i>
+                        </a>
+                    </li>
+                    <li class="github">
+                        <a href="https://github.com/Phaura" target="_blank" rel="noopener noreferrer">
+                            <i class="uit uit-github-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
+

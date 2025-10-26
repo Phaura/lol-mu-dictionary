@@ -72,7 +72,10 @@ h3 {
     margin: 0;
     flex-shrink: 0;
     width: 100%;
+}
 
+a {
+    text-decoration: none;
 }
 
 
@@ -196,8 +199,10 @@ li, li a {
     height: 60vh;
     max-height: 800px;
     max-width: 1200px;
+    backdrop-filter: blur(8px);
 
 }
+
 
 
 .opponent-champ {
@@ -209,6 +214,7 @@ li, li a {
     height: 60vh;
     max-height: 800px;
     max-width: 1200px;
+    backdrop-filter: blur(8px);
     
 }
 

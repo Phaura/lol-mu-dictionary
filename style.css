@@ -347,14 +347,14 @@ li, li a {
 
 
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     h3 {
         font-size: 10vh;
     }
     .form input {
         width: 100%;
     }
-} */
+}
 
 
 

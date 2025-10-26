@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toplane Matchup Oracle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/thinline.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/solid.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+    <script src="script.js"></script>
+    <script src="https://unicons.iconscout.com/release/v4.2.0/script/monochrome/bundle.js" defer></script>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <nav class="zone nav">
+            <ul class="main-nav">
+                <li><a href="#about">About</a></li>
+                <li class="contact-nav"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="main">
+            <div class="title"><img src="toplane-mu-oracle-banner-002.png"></div>
+            <!-- <div class="form block">
+                <form>
+                    Enter Champion <input type="text" name="champion">
+                    <br>
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+            </div> -->
+            <div class="square">
+                <!-- <h3>TEXT</h3> -->
+                <div class="vs-portraits">
+                    <div class="user-champ"></div>
+                    <div class="opponent-champ"></div>
+                </div>
+                <div class="main-card">
+                    <div class="card-zone" data-champion="aatrox"><img src="champion_sources/aatrox-icon-002.png"></div>
+                    <div class="card-zone" data-champion="akali"><img src="champion_sources/akali-icon-001.png"></div>
+                    <div class="card-zone" data-champion="ambessa"><img src="champion_sources/ambessa-icon-001.png"></div>
+                    <div class="card-zone" data-champion="camille"><img src="champion_sources/camille-icon-001.png"></div>
+                    <div class="card-zone" data-champion="chogath"><img src="champion_sources/chogath-icon-001.png"></div>
+                    <div class="card-zone" data-champion="darius"><img src="champion_sources/darius-icon-003.png"></div>
+                    <div class="card-zone" data-champion="dr_mundo"><img src="champion_sources/dr_mundo-icon-001.png"></div>
+                    <div class="card-zone" data-champion="fiora"><img src="champion_sources/fiora-icon-002.png"></div>
+                    <div class="card-zone" data-champion="gangplank"><img src="champion_sources/gangplank-icon-001.png"></div>
+                    <div class="card-zone" data-champion="garen"><img src="champion_sources/garen-icon-002.png"></div>
+                    <div class="card-zone" data-champion="gnar"><img src="champion_sources/gnar-icon-001.png"></div>
+                    <div class="card-zone" data-champion="gragas"><img src="champion_sources/gragas-icon-002.png"></div>
+                    <div class="card-zone" data-champion="gwen"><img src="champion_sources/gwen-icon-003.png"></div>
+                    <div class="card-zone" data-champion="illaoi"><img src="champion_sources/illaoi-icon-002.png"></div>
+                    <div class="card-zone" data-champion="irelia"><img src="champion_sources/irelia-icon-001.png"></div>
+                    <div class="card-zone" data-champion="jax"><img src="champion_sources/jax-icon-002.png"></div>
+                    <div class="card-zone" data-champion="jayce"><img src="champion_sources/jayce-icon-002.png"></div>
+                    <div class="card-zone" data-champion="kayle"><img src="champion_sources/kayle-icon-001.png"></div>
+                    <div class="card-zone" data-champion="kennen"><img src="champion_sources/kennen-icon-001.png"></div>
+                    <div class="card-zone" data-champion="kled"><img src="champion_sources/kled-icon-001.png"></div>
+                    <div class="card-zone" data-champion="ksante"><img src="champion_sources/ksante-icon-001.png"></div>
+                    <div class="card-zone" data-champion="malphite"><img src="champion_sources/malphite-icon-001.png"></div>
+                    <div class="card-zone" data-champion="mordekaiser"><img src="champion_sources/mordekaiser-icon-001.png"></div>
+                    <div class="card-zone" data-champion="nasus"><img src="champion_sources/nasus-icon-001.png"></div>
+                    <div class="card-zone" data-champion="olaf"><img src="champion_sources/olaf-icon-001.png"></div>
+                    <div class="card-zone" data-champion="ornn"><img src="champion_sources/ornn-icon-001.png"></div>
+                    <div class="card-zone" data-champion="pantheon"><img src="champion_sources/pantheon-icon-001.png"></div>
+                    <div class="card-zone" data-champion="poppy"><img src="champion_sources/poppy-icon-001.png"></div>
+                    <div class="card-zone" data-champion="quinn"><img src="champion_sources/quinn-icon-001.png"></div>
+                    <div class="card-zone" data-champion="renekton"><img src="champion_sources/renekton-icon-001.png"></div>
+                    <div class="card-zone" data-champion="riven"><img src="champion_sources/riven-icon-001.png"></div>
+                    <div class="card-zone" data-champion="rumble"><img src="champion_sources/rumble-icon-001.png"></div>
+                    <div class="card-zone" data-champion="ryze"><img src="champion_sources/ryze-icon-001.png"></div>
+                    <div class="card-zone" data-champion="sett"><img src="champion_sources/sett-icon-002.png"></div>
+                    <div class="card-zone" data-champion="shen"><img src="champion_sources/shen-icon-003.png"></div>
+                    <div class="card-zone" data-champion="singed"><img src="champion_sources/singed-icon-001.png"></div>
+                    <div class="card-zone" data-champion="sion"><img src="champion_sources/sion-icon-001.png"></div>
+                    <div class="card-zone" data-champion="swain"><img src="champion_sources/swain-icon-001.png"></div>
+                    <div class="card-zone" data-champion="tahm_kench"><img src="champion_sources/tahm_kench-icon-001.png"></div>
+                    <div class="card-zone" data-champion="teemo"><img src="champion_sources/teemo-icon-001.png"></div>
+                    <div class="card-zone" data-champion="trundle"><img src="champion_sources/trundle-icon-001.png"></div>
+                    <div class="card-zone" data-champion="tryndamere"><img src="champion_sources/tryndamere-icon-001.png"></div>
+                    <div class="card-zone" data-champion="udyr"><img src="champion_sources/udyr-icon-001.png"></div>
+                    <div class="card-zone" data-champion="urgot"><img src="champion_sources/urgot-icon-001.png"></div>
+                    <div class="card-zone" data-champion="volibear"><img src="champion_sources/volibear-icon-002.png"></div>
+                    <div class="card-zone" data-champion="warwick"><img src="champion_sources/warwick-icon-001.png"></div>
+                    <div class="card-zone" data-champion="wukong"><img src="champion_sources/wukong-icon-001.png"></div>
+                    <div class="card-zone" data-champion="yasuo"><img src="champion_sources/yasuo-icon-002.png"></div>
+                    <div class="card-zone" data-champion="yone"><img src="champion_sources/yone-icon-002.png"></div>
+                    <div class="card-zone" data-champion="yorick"><img src="champion_sources/yorick-icon-001.png"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer">
+            <!-- <h1>FOOTER</h1> -->
+            <div class="socials footer">
+                <ul class="socials">
+                    <li class="twitter-X">
+                        <a href="https://x.com/Phauraa" target="_blank" rel="noopener noreferrer">
+                            <i class="uit uit-twitter-alt"></i>
+                        </a>
+                    </li>
+                    <li class="youtube">
+                        <a href="https://www.youtube.com/@Phaura" target="_blank" rel="noopener noreferrer">
+                            <i class="uit uit-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="instagram">
+                        <a href="https://www.instagram.com/xphaura/" target="_blank" rel="noopener noreferrer">
+                            <i class="uil uil-instagram" height=></i>
+                        </a>
+                    </li>
+                    <li class="github">
+                        <a href="https://github.com/Phaura" target="_blank" rel="noopener noreferrer">
+                            <i class="uit uit-github-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

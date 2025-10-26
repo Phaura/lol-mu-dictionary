@@ -82,6 +82,9 @@ h3 {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.192);
     backdrop-filter: blur(8px);
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .main-nav li:hover {
@@ -133,7 +136,9 @@ form {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    width: 100%;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
     /* background-color: rgba(0, 0, 0, 0.192); */
     backdrop-filter: blur(8px);
 

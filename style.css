@@ -219,7 +219,7 @@ li, li a {
     /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
     overflow-x: auto;
-    /* scrollbar-width: none; */
+    scrollbar-width: none;
     scroll-snap-type: x mandatory;
     gap: 2%;
     justify-content: flex-start;

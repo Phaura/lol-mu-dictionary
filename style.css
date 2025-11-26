@@ -11,15 +11,29 @@ body {
     height: 100%;
     background-color: rgb(92, 50, 2);
     margin: 0;
-    background: url(camille_jhin.gif) no-repeat center center fixed;
+    /* background: url(Phaura\ LoL\ Matchup\ Oracle\ Background.mp4) no-repeat center center fixed; */
+    font-size: 62.5%;
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-
+    font-family: monospace;
+    position: relative;
+    z-index: 1;
     /* display: flex;
     flex-direction: column; */
     /* overflow: hidden; */
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .wrapper {
@@ -37,6 +51,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* background-color: white; */
 }
 
 .square {
@@ -44,10 +59,11 @@ body {
     flex-direction: column;
     /* grid-template-columns: auto auto auto; */
     /* grid-template-rows: 1fr; */
+    justify-content: flex-start;
     align-items: center;
     /* background-color: rgba(0, 0, 0, 0.445); */
     width: 100%;
-    min-height: 80vh;
+    min-height: 60vh;
     /* height: auto; */
     max-width: 1500px;
     /* border: 1px solid rgba(0, 0, 0, 0.562); */
@@ -68,7 +84,7 @@ h3 {
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    font-size: .8em;
+    font-size: 2em;
     margin: 0;
     flex-shrink: 0;
     width: 100%;
@@ -86,7 +102,7 @@ a {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.192);
     backdrop-filter: blur(8px);
-    width: 100vw;
+    width: 100%;
     /* left: 50%;
     transform: translateX(-50%); */
 }
@@ -115,6 +131,9 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: 12em;
+    color: white;
+    padding: 1em;
 
 }
 
@@ -140,7 +159,8 @@ form {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    width: 100vw;
+    width: 100%;
+    font-size: 2em;
     /* left: 50%;
     transform: translateX(-50%); */
     /* background-color: rgba(0, 0, 0, 0.192); */
@@ -175,97 +195,53 @@ li, li a {
 } */
    
 
-.vs-portraits {
+/* .vs-portraits {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 4vw;
-    /* width: 100%; */
-    /* height: auto; */
-    /* min-width: 50px; */
+    width: 100%;
+    height: auto; 
+    min-width: 50px; 
     max-height: 800px;
     max-width: 1500px;
-}
-
-
-.user-champ {
-    /* width: 100%;
-    height: 100%; */
-    background-color: rgba(0, 0, 0, 0.384);
-    border: 1px solid white;
-    margin: 1vh;
-
-    width: 40vw;
-    height: 60vh;
-    max-height: 800px;
-    max-width: 1200px;
-    backdrop-filter: blur(8px);
-
-}
+} */
 
 
 
-.opponent-champ {
-    background-color: rgba(0, 0, 0, 0.384);
-    border: 1px solid white;
-    margin: 1vh;
-
-    width: 40vw;
-    height: 60vh;
-    max-height: 800px;
-    max-width: 1200px;
-    backdrop-filter: blur(8px);
-    
-}
 
 .main-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
-    overflow-x: auto;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    gap: 2%;
     justify-content: flex-start;
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;  */
+    overflow-y: auto;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+    gap: 1%;
     align-items: center;
-    width: 80%;
-    height: auto;
+    font-size: 5em;
+    font-family: monospace;
+    color: white;
+    width: 40%;
+    height: 10em;
     max-height: 800px;
     max-width: 1200px;
-    /* min-width: 20%; */
+    min-width: 300px; 
     margin: 0 auto;
     padding: 0px;
-    /* backdrop-filter: blur;  */
-}
-
-.card-zone {
-    flex: 0 0 150px;
-    scroll-snap-align: center;
-    /* align-items: center;  */
-    /* overflow: hidden; */
-    /* width: 10%; */
-    border-radius: 0px;
-    /* background-color: rgba(0, 0, 0, 0.568); */
-    /* backdrop-filter: blur; */
-    transition: transform 0.3s ease, color 0.3s ease;
-
-
-}
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur;  
+}  
 
 
 
-.card-zone img { 
-    width: 100%;
-    height: auto;
-    padding: 0px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* border-radius: 12px; */
-    /* display: block; */
-    
-    
-}
+
+
+
+
 
 
 @keyframes breathe {

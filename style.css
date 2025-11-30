@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 75.5%;
+    font-size: 80.5%;
 }
 
 body {
@@ -121,6 +121,8 @@ body {
     background-color: rgba(255, 255, 255, 0);
     outline: 1px solid rgba(255, 255, 255, 0.464);
 
+
+    cursor: pointer;
     /* backdrop-filter: blur;   */
 }
 
@@ -134,6 +136,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     
     gap: clamp(1rem, 3vw, 1rem);
     color: white;
@@ -150,6 +153,13 @@ body {
 
 }
 
+.selected {
+    border: 2px solid rgb(0, 255, 128);
+    box-shadow: 0 0 10px rgb(1, 255, 115);
+    
+}
+
+
 /* .pickOne, 
 .pickTwo,
 .vsWindow,
@@ -163,6 +173,11 @@ body {
     word-break: break-word;
 }
 
+.champ1,
+.champ2 {
+    animation: glitchFlicker 3.5s linear infinite;
+}
+
 .card-zone {
     border: 1px solid rgba(255, 255, 255, 0.197);
     width: 100%;
@@ -174,7 +189,8 @@ body {
 .card-zone:hover {
     /* transform: scale(1.1); */
     animation: breathe 1s ease-in-out infinite;
-    
+    border: 2px solid rgba(0, 255, 128, 0.651);
+    /* box-shadow: 0 0 10px rgb(255, 255, 255); */
     z-index: 1;
 }
 
@@ -313,7 +329,13 @@ a {
     
 } */
 
-
+/* .rune-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 10%;
+    
+} */
 
 
 
@@ -354,6 +376,7 @@ li, li a {
     color: white;
     
 }
+
 
 
 

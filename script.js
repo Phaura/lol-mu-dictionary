@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const state = {
             ally: null,
             enemy: null,
+        
         };
+
+       
     
     const cards = document.querySelectorAll('.card-zone')
 
@@ -30,9 +33,26 @@ document.addEventListener('DOMContentLoaded', () => {
             selectedEnemyCard = card;
         }
 
+
+        // Deselect Champ Pick Code Block
+
+
+        
+            
+        // Champion Lock in State Block
+        
+        if (state.ally && state.enemy) {
+            document.querySelector('.vsWindow').classList.add('ready');
+            } else {
+                document.querySelector('.vsWindow').classList.remove('ready');
+            }
+        
+        
+        
         console.log(state);
 
         updateVSWindow();
+
 
         });
     });
@@ -46,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // if state.enemy exists, display it; otherwise default text
         champ2E1.textContent = state.enemy || 'Enemy Champion';
+    
+        
     }
 
 
@@ -53,6 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedEnemyCard = null;
 
 
+
+
+    // if (champ1E1.textContent = state.ally) & & (champ2E1.textContent = state.enemy) {
+
+    // }
+
+
+    
+    
+
+    
 });
 
 

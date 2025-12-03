@@ -151,12 +151,25 @@ body {
     padding: 1rem 2rem;
     box-sizing: border-box;
 
+    /* border: 2px solid rgb(0, 255, 128);
+    box-shadow: 0 0 10px rgb(1, 255, 115); */
+
 }
 
-.selected {
-    border: 2px solid rgb(0, 255, 128);
-    box-shadow: 0 0 10px rgb(1, 255, 115);
-    
+
+.vsWindow.ready {
+    /* box-shadow:
+        0 0 16px rgba(255,255,255,0.4),
+        0 0 40px rgba(0, 255, 128, 0.274), */
+    border-color: rgba(255,255,255,0.8);
+    border: 2px solid rgba(0, 255, 128, 0.349);
+
+    filter:
+        invert(0)
+        drop-shadow(0 0 12px rgba(255, 128, 0,1))
+        drop-shadow(0 0 25px rgba(255, 128, 0,.9))
+        drop-shadow(0 0 45px rgba(255, 128, 0,.65));
+    /* animation: breathe 1s ease-in-out infinite; */
 }
 
 
@@ -183,16 +196,52 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
+
+    
+    box-shadow:
+        0 0 6px rgba(0 0 0 0.6,)
+        inset 0 0 6px rgba(255,255,255,0.04);
+    background: rgba(0, 0, 0, 0);
+    /* filter:blur(.5); */
+
+    transition:
+        transform 0.25s ease
+        box-shadow 0.25s ease
+        border-color 0.25s ease
+        background 0.25s ease;
     /* background-color: rgba(0, 0, 0, 0.473); */
 }
 
 .card-zone:hover {
-    /* transform: scale(1.1); */
-    animation: breathe 1s ease-in-out infinite;
-    border: 2px solid rgba(0, 255, 128, 0.651);
+    transform: scale(1.1);
+
+    
+    border: 2px solid rgba(136, 249, 124, 0.559);
     /* box-shadow: 0 0 10px rgb(255, 255, 255); */
     z-index: 1;
+
+    
+
+    
 }
+
+
+
+.selected {
+    border: 2px solid rgba(136, 249, 124, 0.724);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.446);
+    
+    filter:
+        invert(0)
+        drop-shadow(0 0 12px rgb(255, 174, 0))
+        drop-shadow(0 0 25px rgba(255, 0, 0, 0.374))
+        drop-shadow(0 0 45px rgba(255, 128, 0,.65)); 
+     
+    
+    animation: breathe 1s ease-in-out infinite;
+    
+}
+
 
 
 .statWindow {
@@ -439,14 +488,78 @@ li, li a {
     /* box-shadow: 0 0 15px rgba(0, 255, 179, 0.4) */
 }
 
-/* .card-zone.active {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.637);
-    padding: 50px;
-    margin: 20px;
+
+
+
+.twitter-X img,
+.twitch img,
+.youtube img,
+.instagram img,
+.github img,
+.discord img {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    opacity: .5;
+    filter: invert(1);
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+.twitter-X img:hover,
+.twitch img:hover,
+.youtube img:hover,
+.instagram img:hover,
+.github img:hover,
+.discord img:hover {
+    transform: scale(1.8);
+    opacity: 1;
 
 }
-     */
+
+
+
+.twitch img:hover {
+    filter: invert(1)
+        
+    drop-shadow(0 0 12px rgba(167, 108, 254,1))
+    drop-shadow(0 0 25px rgba(167, 108, 254,.9))
+    drop-shadow(0 0 45px rgba(167, 108, 254,.65));
+}
+
+
+.youtube img:hover {
+    filter: invert(1)
+        
+    drop-shadow(0 0 12px rgba(255, 70, 70,1))
+    drop-shadow(0 0 25px rgba(255,70,70,.9))
+    drop-shadow(0 0 45px rgba(255,70,70,0.65));
+}
+
+
+.discord img:hover {
+    filter: invert(1)
+        
+    drop-shadow(0 0 12px rgba(113, 70, 255,1))
+    drop-shadow(0 0 25px rgba(113, 70, 255,.9))
+    drop-shadow(0 0 45px rgba(113, 70, 255,0.65));
+}
+
+.twitter-X img:hover,
+.github img:hover {
+    filter: invert(1)
+        
+    drop-shadow(0 0 12px rgba(255, 255, 255))
+    drop-shadow(0 0 25px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 45px rgba(255, 255, 255, 0.65));
+}
+
+
+
 
 
 .socials {
@@ -461,47 +574,16 @@ li, li a {
     margin-top: auto;
 } */
 
-.socials a i {
+.socials a i,
+.socials a img {
     display: inline-block;
     transition: transform 0.3s ease, color 0.3s ease;
     font-size: 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
-.socials a:hover i {
-    transform: scale(1.8);
-}
-.socials.uil.instagram {
-    font-size: 1.5rem;
-}
+
     
-
-/* .instagram a {
-    color: white;
-    transition: all 0.4 ease;
-} */
-
-
-/* }
-
-.youtube a:hover i {
-    color: #fc7676f6;
-
-}
-
-.twitter-X a:hover i {
-    color: #50e5fff6;
-}
-
-.instagram a:hover i {
-    color: #e78efd;
-
-}
-
-.github a:hover i {
-    color: rgb(73, 73, 73);
-} */
-
 
 
 

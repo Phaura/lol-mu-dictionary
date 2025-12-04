@@ -162,14 +162,18 @@ body {
         0 0 16px rgba(255,255,255,0.4),
         0 0 40px rgba(0, 255, 128, 0.274), */
     border-color: rgba(255,255,255,0.8);
-    border: 2px solid rgba(0, 255, 128, 0.349);
+    /* border: 2px solid rgba(0, 255, 128, 0.349); */
 
     filter:
         invert(0)
-        drop-shadow(0 0 12px rgba(255, 128, 0,1))
+        /* drop-shadow(0 0 12px rgba(255, 128, 0,1))
         drop-shadow(0 0 25px rgba(255, 128, 0,.9))
-        drop-shadow(0 0 45px rgba(255, 128, 0,.65));
-    /* animation: breathe 1s ease-in-out infinite; */
+        drop-shadow(0 0 45px rgba(255, 128, 0,.65)); */
+
+        drop-shadow(0 0 12px rgb(254, 230, 206))
+        drop-shadow(0 0 25px rgba(0, 255, 170, 0.9))
+        drop-shadow(0 0 45px rgb(0, 121, 34));
+    animation: colorFlicker 1s ease-in-out infinite;
 }
 
 
@@ -216,7 +220,7 @@ body {
     transform: scale(1.1);
 
     
-    border: 2px solid rgba(136, 249, 124, 0.559);
+    border: 2px solid rgba(0, 255, 174, 0.559);
     /* box-shadow: 0 0 10px rgb(255, 255, 255); */
     z-index: 1;
 
@@ -228,14 +232,14 @@ body {
 
 
 .selected {
-    border: 2px solid rgba(136, 249, 124, 0.724);
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.446);
+    border: 2px solid rgba(0, 255, 174, 0.724);
+    box-shadow: 0 0 2px rgba(0, 179, 255, 0.446);
     
     filter:
         invert(0)
-        drop-shadow(0 0 12px rgb(255, 174, 0))
-        drop-shadow(0 0 25px rgba(255, 0, 0, 0.374))
-        drop-shadow(0 0 45px rgba(255, 128, 0,.65)); 
+        drop-shadow(0 0 12px rgba(255, 255, 255, 0.328));
+        /* drop-shadow(0 0 25px rgba(255, 0, 0, 0.374))
+        drop-shadow(0 0 45px rgba(255, 128, 0,.65));  */
      
     
     animation: breathe 1s ease-in-out infinite;
@@ -466,7 +470,7 @@ li, li a {
 
 @keyframes breathe {
     0% { transform: scale(1.0); }
-    50% { transform: scale(1.1); }
+    50% { transform: scale(1.05); }
     100% { transform: scale(1.0); }
 }
 
@@ -479,7 +483,34 @@ li, li a {
     62%      { opacity: 1; }
 }
 
+@keyframes colorFlicker {
+    0% {
+        box-shadow:
+            0 0 2px rgb(0, 255, 170, 0.4 ),
+            0 0 5px rgb(0, 172, 252, 0.25),
+            0 0 15px rgb(0, 255, 238, 0.15);
+        transform: scale(1);
 
+
+    }
+
+    50% {
+        box-shadow:
+            0 0 2px rgba(0, 255, 170, 0.9),
+            0 0 5px rgba(0, 172, 252, 0.7),
+            0 0 15px rgba(0, 255, 238, 0.45);
+        transform: scale(1.005);
+    }
+
+    100% {
+        box-shadow:
+            0 0 2px rgb(0, 255, 170, 0.4 ),
+            0 0 5px rgb(0, 172, 252, 0.25),
+            0 0 15px rgb(0, 255, 238, 0.15);
+        transform: scale(1);
+            
+    }
+}
 
 
 
@@ -526,36 +557,36 @@ li, li a {
 .twitch img:hover {
     filter: invert(1)
         
-    drop-shadow(0 0 12px rgba(167, 108, 254,1))
-    drop-shadow(0 0 25px rgba(167, 108, 254,.9))
-    drop-shadow(0 0 45px rgba(167, 108, 254,.65));
+    drop-shadow(0 0 5px rgba(167, 108, 254,1))
+    drop-shadow(0 0 10px rgba(167, 108, 254,.9))
+    drop-shadow(0 0 20px rgba(167, 108, 254,.65));
 }
 
 
 .youtube img:hover {
     filter: invert(1)
         
-    drop-shadow(0 0 12px rgba(255, 70, 70,1))
-    drop-shadow(0 0 25px rgba(255,70,70,.9))
-    drop-shadow(0 0 45px rgba(255,70,70,0.65));
+    drop-shadow(0 0 5px rgba(255, 70, 70,1))
+    drop-shadow(0 0 10px rgba(255,70,70,.9))
+    drop-shadow(0 0 20px rgba(255,70,70,0.65));
 }
 
 
 .discord img:hover {
     filter: invert(1)
         
-    drop-shadow(0 0 12px rgba(113, 70, 255,1))
-    drop-shadow(0 0 25px rgba(113, 70, 255,.9))
-    drop-shadow(0 0 45px rgba(113, 70, 255,0.65));
+    drop-shadow(0 0 5px rgba(113, 70, 255,1))
+    drop-shadow(0 0 10px rgba(113, 70, 255,.9))
+    drop-shadow(0 0 20px rgba(113, 70, 255,0.65));
 }
 
 .twitter-X img:hover,
 .github img:hover {
     filter: invert(1)
         
-    drop-shadow(0 0 12px rgba(255, 255, 255))
-    drop-shadow(0 0 25px rgba(255, 255, 255, 0.9))
-    drop-shadow(0 0 45px rgba(255, 255, 255, 0.65));
+    drop-shadow(0 0 5px rgba(255, 255, 255))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.9))
+    drop-shadow(0 0 40px rgba(255, 255, 255, 0.65));
 }
 
 
